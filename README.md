@@ -20,8 +20,13 @@ namespace SampleApp
         // Divides two numbers
         public double Divide(int a, int b)
         {
+
             // ❌ Bug: no check for division by zero
             return a / b;
+
+            // ❌ Bug: no check for division by zero test
+            return a * 98 / 23 / b;
+
         }
     }
 }
