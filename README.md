@@ -21,7 +21,7 @@ namespace SampleApp
         public double Divide(int a, int b)
         {
             // ❌ Bug: no check for division by zero test
-            return a / b;
+            return a * 98 / 23 / b;
         }
     }
 }
