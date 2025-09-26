@@ -9,7 +9,10 @@ namespace SampleApp
         {
             return a + b;
         }
-
+public int Aasasdfasdd(int a, int b)
+        {
+            return a + b;
+        }
         public int Aasasdfasdd(int a, int b)
         {
             return a + b;
