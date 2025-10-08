@@ -1,0 +1,23 @@
+        private bool IsAllowedOrigin(string origin)
+        {
+            if (string.IsNullOrWhiteSpace(origin)) return false;
+
+            var commaAllowedUrls = CloudConfigurationManager.GetSetting("as");
+
+#if DEBUG
+            if (commaAllowedUrls == "*")
+            {
+                return true;
+            }
+#endif
+            var allowedUrls = commaAllowedUrls.Split(',').ToList();
+
+            return allowedUrls.Exists(allowedUri =>
+            {
+                if (string.IsNullOrWhiteSpace(allowedUri)) return false;
+
+                var regex = "^" + Regex.Escape(allowedUri).Replace("\\*", ".*") + "$";
+
+                return Regex.IsMatch(origin, regex);
+            });
+        }
