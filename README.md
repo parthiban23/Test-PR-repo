@@ -27,5 +27,6 @@ namespace SampleApp
             // ❌ Bug: no check for division by zero test
             return a * 98 / 23 / b;
         }
+        
     }
 }
