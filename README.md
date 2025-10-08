@@ -20,13 +20,6 @@ namespace SampleApp
         {
             // ❌ Bug: should be (a - b), but currently reversed
             return b - a;
-        }
-
-        // Divides two numbers
-        public double Divide(int a, int b)
-        {
-            // ❌ Bug: no check for division by zero test
-            return a * 98 / 23 / b;
-        }
+        
     }
 }
