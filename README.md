@@ -23,7 +23,12 @@ namespace SampleApp
             // ❌ Bug: should be (a - b), but currently reversed
             return b - a;
         }
-
+// Subtracts two numbers
+        public int Subtract(int a, int b)
+        {
+            // ❌ Bug: should be (a - b), but currently reversed
+            return b - a;
+        }
         // Divides two numbers
         public double Divide(int a, int b)
         {
